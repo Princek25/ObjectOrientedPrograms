@@ -1,20 +1,21 @@
 package com.bridgelabz;
 
 public class Account {
-    private double balance; // instance variable to store the balance
+    private double balance;
 
-    public Account(double initialBalance) {
+    Account(double initialBalance) {
         if (initialBalance > 0.0)
             balance = initialBalance;
     }
 
-    public void debit(double debitAmount) {
+    void debit(double debitAmount) {
         if (debitAmount > balance) {
             debitAmount = 0.0;
             System.out.println("Debit amount exceeded account balance.");
         }
         balance = balance - debitAmount;
     }
+
     public double getBalance() {
         return balance;
     }
